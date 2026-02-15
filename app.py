@@ -32,7 +32,7 @@ def init_db():
 
 @app.route('/')
 def index():
-    return send_from_directory('.', 'vote.html')
+    return send_from_directory('.', 'index.html')
 
 
 @app.route('/api/results', methods=['GET'])
@@ -101,3 +101,4 @@ def check_voted():
 if __name__ == '__main__':
     init_db()
     app.run(host='0.0.0.0', port=5000, debug=True)
+
